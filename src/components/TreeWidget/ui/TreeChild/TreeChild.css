@@ -1,0 +1,56 @@
+.tree-child__actions {
+  position: relative;
+}
+
+.tree-child__accordion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tree-child__accordion:hover {
+  background-color: rgba(123, 123, 123, 0.8);
+  box-shadow: 0 0 5px rgba(123, 123, 123, 0.5);
+}
+
+.tree-child__accordion svg {
+  rotate: 90deg;
+  transition: all 0.3s ease;
+
+  opacity: 0.8;
+}
+
+.tree-child__accordion svg path {
+  stroke: #ffffff;
+}
+
+.tree-child__accordion:hover svg {
+  opacity: 1;
+}
+
+.tree-child__accordion.is-active svg {
+  rotate: 270deg;
+}
+
+.tree-child__button {
+  width: 100%;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  padding: 8px 30px;
+  transition: all 0.3s ease;
+}
+
+.tree-child__button:hover {
+  background-color: rgba(123, 123, 123, 0.8);
+  color: #ffffff;
+}

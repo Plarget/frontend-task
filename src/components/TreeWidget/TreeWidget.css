@@ -1,0 +1,70 @@
+.tree-widget {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 500px;
+  overflow-y: auto;
+  background-color: #2c2c2c;
+  padding: 15px 0;
+  border-left: 1px solid #4a4a4a;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  scrollbar-width: thin;
+  scrollbar-color: #4a4a4a #2c2c2c;
+}
+
+.tree-widget::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tree-widget::-webkit-scrollbar-track {
+  background: #2c2c2c;
+}
+
+.tree-widget::-webkit-scrollbar-thumb {
+  background-color: #4a4a4a;
+  border-radius: 4px;
+  border: 2px solid #2c2c2c;
+}
+
+.tree-widget__tooltip {
+  position: fixed;
+  width: 150px;
+  max-height: 300px;
+  overflow-y: scroll;
+  background-color: #2c2c2c;
+  border: 1px solid #4a4a4a;
+  border-radius: 4px;
+  padding: 8px;
+  transform: translateY(-100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 4;
+  scrollbar-width: thin;
+  scrollbar-color: #4a4a4a #2c2c2c;
+}
+.tree-widget__tooltip::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tree-widget__tooltip::-webkit-scrollbar-track {
+  background: #2c2c2c;
+}
+
+.tree-widget__tooltip::-webkit-scrollbar-thumb {
+  background-color: #4a4a4a;
+  border-radius: 4px;
+  border: 2px solid #2c2c2c;
+}
+
+.tree-widget__tooltip-item {
+  color: #ffffff;
+  padding: 4px 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+.tree-widget__tooltip-item:last-child {
+  border-bottom: none;
+}

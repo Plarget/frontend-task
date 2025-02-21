@@ -9,6 +9,11 @@ CameraControls.install({ THREE });
 
 export type ViewerStatus = "loading" | "error" | "idle";
 
+export type TLastMeshed = {
+  mesh: THREE.Mesh;
+  material: THREE.Material,
+  label: THREE.Sprite<THREE.Object3DEventMap>,
+}[]
 class Viewer {
   public id: string;
   public scene: THREE.Scene;
@@ -22,6 +27,9 @@ class Viewer {
   public model: THREE.Object3D | undefined;
 
   public status = new RX.BehaviorSubject<ViewerStatus>("idle");
+
+  public lastMeshed: TLastMeshed = [];
+  public bubbles: THREE.Sprite<THREE.Object3DEventMap>[] = []
 
   constructor(container: HTMLDivElement) {
     this.id = uuid.v4();
